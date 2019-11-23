@@ -1,0 +1,338 @@
+<div class="dropdown-menu dropdown-menu-sm" id="context-menu" style="z-index: 9999">
+  <a class="dropdown-item open-file" href="#">Open</a>
+  <a class="dropdown-item delete-file" href="#">Delete</a>
+  <a class="dropdown-item rename-file" href="#">Rename</a>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="[chkn:path]">CHKNIDE</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+      <li class="nav-item">
+        <a class="nav-link nav-link-collapse " href="#" id="controller-wrap" data-toggle="collapse" data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false"
+        >Controller</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-collapse" href="#" id="page-wrap" data-toggle="collapse" data-target="#collapseSubItems1" aria-controls="collapseSubItems1"  aria-expanded="false" >Pages</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems1" data-parent="#navAccordion">
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link nav-link-collapse" id="template-wrap" href="#" data-toggle="collapse" data-target="#collapseSubItems3" aria-controls="collapseSubItems3" aria-expanded="false" >Template</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems3" data-parent="#navAccordion">
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-collapse" id="styles-wrap" href="#" data-toggle="collapse" data-target="#collapseSubItems4" aria-controls="collapseSubItems4" aria-expanded="false" >Styles</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems4" data-parent="#navAccordion">
+          
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-collapse" id="scripts-wrap" href="#" data-toggle="collapse" data-target="#collapseSubItems5" aria-controls="collapseSubItems5" aria-expanded="false" >Scripts</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems5" data-parent="#navAccordion">
+        </ul>
+      </li>
+     
+    </ul>
+    <form class="form-inline ml-auto mt-2 mt-md-0 settings">
+      <a href="[chkn:path]" class="wid">Start Page</a>
+      <a href="#" class="application-widget wid">Application</a>
+      <a href="#" class="database-widget wid">Database</a>
+      <a href="#" class="vendor-widget wid">Vendors</a>
+      <a href="#" class="package-widget wid">Packages</a>
+      <a href="http://$host/$folder" target="_blank" rel="noopener noreferrer" class=" wid live">View Live</a>
+      |
+      <a href="[chkn:path]ide">$project</a>
+    </form>
+  </div>
+</nav>
+
+
+<main class="content-wrapper">
+  <div class="container-fluid">
+    <div class="header-container">
+      
+    </div>
+    <div class="editor-container">
+      <div class="editor-blocker">
+        <p>Saving...</p>
+      </div>
+      <div class="editor-wrap active-wrap main-file">
+        <p>Please select a file</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+      <div class="text-center">
+          <p class="text-right pull-right">
+              
+          CHKN Framework 3(3.0) | CHKNIDE 1(1.0)
+          </p>
+      </div>
+
+      
+  </div>
+  <div class="chknconsole" data-toggle="false">
+      <a href="#" class="console-link">Console</a>
+      <div class="console-container">
+        <iframe src="http://$host/$folder/console"></iframe>
+      </div>
+  </div>
+  
+</footer>
+
+
+<!--Open Project Modal -->
+<div class="modal fade" id="openApplication">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Application Settings</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+      	<form id="Application_set_form">
+	        <div class="row">
+	          <div class="form-group col-md-6">
+	            <hr>
+	            <label>Local </label>
+	            <select class="form-control local"  name="local">
+	              <option value="1">On</option>
+	              <option value="0">Off</option>
+	            </select>
+	          </div>
+	           <div class="form-group col-md-6">
+	            <hr>
+	            <label>Console </label>
+	            <select class="form-control console"  name="console">
+	              <option value="1">On</option>
+	              <option value="0">Off</option>
+	            </select>
+	          </div>
+	          <div class="form-group col-md-6">
+	            <hr>
+	            <label>CSS Error </label>
+	            <select class="form-control css_error"  name="css_error">
+	              <option value="1">On</option>
+	              <option value="0">Off</option>
+	            </select>
+	          </div>
+	          <div class="form-group col-md-6">
+	            <hr>
+	            <label>JS Error </label>
+	            <select class="form-control js_error"  name="js_error">
+	              <option value="1">On</option>
+	              <option value="0">Off</option>
+	            </select>
+	          </div>
+	          <div class="form-group col-md-6">
+	            <hr>
+	            <label>Default Image Upload Size </label>
+	            <input class="form-control default_image_size"  value="8000000000000"  name="default_image_size" placeholder="Enter Default Image Size Value Here...">
+	          </div>
+	          <div class="form-group col-md-6">
+	            <hr>
+	            <label>Default File Upload Size </label>
+	            <input class="form-control default_file_size" name="default_file_size" value="8000000000000" placeholder="Enter Default File Size Value Here...">
+	          </div>
+	        </div>
+	    </form>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      	<button class="btn btn-success save-sapplication">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!--Open Project Modal -->
+<div class="modal fade" id="openDatabase">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Database Settings</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+      	<form id="Database_set_form">
+	        <div class="row">
+              <div class="form-group col-md-6">
+                <hr>
+                <label>DB Connection</label>
+                <input class="form-control db_connection" name="db_connection" value="mysql" placeholder="Enter Connection Value Here...">
+              </div>
+              <div class="form-group col-md-6">
+                <hr>
+                <label>DB Host</label>
+                <input class="form-control db_host" name="db_host" value="localhost" placeholder="Enter Host Value Here...">
+              </div>
+              <div class="form-group col-md-6">
+                <hr>
+                <label>DB Name</label>
+                <input class="form-control db_name" name="db_name" value="" placeholder="Enter Database Name Here...">
+              </div>
+              <div class="form-group col-md-6">
+                <hr>
+                <label>DB Charset</label>
+                <input class="form-control db_charset" name="db_charset" value="utf8" placeholder="Enter Database CHARSET Here...">
+              </div>
+              <div class="form-group col-md-6">
+                <hr>
+                <label>DB Username</label>
+                <input class="form-control db_user" name="db_user" value="" placeholder="Enter Database Username Here...">
+              </div>
+              <div class="form-group col-md-6">
+                <hr>
+                <label>DB Password</label>
+                <input class="form-control db_password" name="db_password" value="" placeholder="Enter Database Password Here...">
+              </div>
+            </div>
+	    </form>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      	<button class="btn btn-success save-sdatabase">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!--Open Project Modal -->
+<div class="modal fade" id="openPackage">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Package Settings</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+      	<form id="Package_set_form">
+	        <div class="form-group packages">
+		        <h5>Packages</h5>
+		        <label><input type="checkbox" data-source="ALL" class="pack"> All</label>
+		        <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack"> Query Builder</label>
+		        <label><input type="checkbox" data-source="ENCRYPTION" class="pack"> Encryption</label>
+		        <label><input type="checkbox" data-source="DEFAULTS" class="pack"> Defaults</label>
+		        <label><input type="checkbox" data-source="UPLOAD" class="pack"> Upload</label>
+		        <label><input type="checkbox" data-source="DOWNLOAD" class="pack"> Download</label>
+		        <label><input type="checkbox" data-source="SESSION" class="pack"> Session</label>
+		        <label><input type="checkbox" data-source="MAINTENANCE_CLASS" class="pack"> Maintenance Class</label>
+		        <label><input type="checkbox" data-source="PAGE_NOT_FOUND" class="pack"> Error 404</label>
+		        <label><input type="checkbox" data-source="CSRF" class="pack"> CSRF Token</label>
+		        <label><input type="checkbox" data-source="MODULE" class="pack"> Module</label>
+		      </div>
+	    </form>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      	<button class="btn btn-success save-spackage">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!--Open Project Modal -->
+<div class="modal fade" id="openVendor">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Global Styles and Scripts Settings</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+      	<form id="vendor_additionals">
+	      	<div class="form-group">
+	          <hr>
+	          <label>Global Styles</label>
+	          <textarea class="form-control vendor_styles" rows="5" name="vendor_styles">
+	          </textarea>
+	        </div>
+	        <div class="form-group">
+	          <hr>
+	          <label>Global Scripts</label>
+	          <textarea class="form-control vendor_scripts" rows="5" name="vendor_scripts">
+	          </textarea>
+	        </div>
+      	</form>
+      	
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      	<button class="btn btn-success save-svendor">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Open Project Modal -->
+<div class="modal fade" id="newPage">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">New Controller Page</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form id="newpage_form">
+          <div class="form-group">
+            <label>Controller</label>
+            <select class="form-control controller-folder" name="controller">
+              
+            </select>
+          </div>
+          <div class="form-group">
+            <label>File Name</label>
+            <input type="text" class="form-control controller-file" name="file">
+          </div>
+        </form>
+        
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <span class="pull-left controller-label"></span>
+        <button class="btn btn-success save-page">Create</button>
+      </div>
+
+    </div>
+  </div>
+</div>

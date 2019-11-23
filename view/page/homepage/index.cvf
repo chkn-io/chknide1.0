@@ -1,0 +1,297 @@
+<div class="preloader" id="pre1">
+  <div class="blocker">
+    <div id="loader">
+      <p class="preloader-content">Please wait</p>
+      <p class="preloader-sub">Roasting your CHKN application</p>
+    </div>
+  </div>
+</div>
+
+<div class="preloader" id="pre2">
+  <div class="blocker">
+    <div id="loader">
+      <p class="preloader-content">Please wait</p>
+      <p class="preloader-sub">Disposing your CHKN application</p>
+    </div>
+  </div>
+</div>
+<div class="container" id="homepage">
+	<div class="row">
+		<div class="col-md-4 col-sm-12 offset-md-4 offset-sm-4">
+				<div class="logo">
+					<div><img src="[chkn:path]public/images/logo.png"></div>
+				</div>
+				<p class="text-center title"> CHKN<span>IDE</span></p>
+				<p class="text-center text-muted sub">CHKN Framework 2018 | IDE Version 1 (1.0)</p>
+
+				<nav>
+					<a href="#" class="new-project"><i class="fas fa-egg"></i> New Project</a>
+					<a href="#" class="open-project"><i class="fas fa-drumstick-bite"></i> Open Project</a>
+					<a href="https://github.com/peejayb1996/CHKN3" target="_blank"><i class="fab fa-github"></i> Documentation</a>
+				</nav>
+		</div>
+	</div>
+</div>
+
+
+<!--New Project Modal -->
+<div class="modal fade" id="newProject">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">New Project</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Basic Settings
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label>Project Name </label>
+                    <input class="form-control project_name"  name="project_name" placeholder="Enter Project Name Here...">
+                  </div>
+                  <div class="form-group packages">
+                    <h5>Packages</h5>
+                    <label><input type="checkbox" data-source="ALL" class="pack"> All</label>
+                    <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack"> Query Builder</label>
+                    <label><input type="checkbox" data-source="ENCRYPTION" class="pack"> Encryption</label>
+                    <label><input type="checkbox" data-source="DEFAULTS" class="pack"> Defaults</label>
+                    <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack"> Download</label>
+                    <label><input type="checkbox" data-source="UPLOAD" class="pack"> Upload</label>
+                    <label><input type="checkbox" data-source="DOWNLOAD" class="pack"> Download</label>
+                    <label><input type="checkbox" data-source="SESSION" class="pack"> Session</label>
+                    <label><input type="checkbox" data-source="MAINTENANCE_CLASS" class="pack"> Maintenance Class</label>
+                    <label><input type="checkbox" data-source="PAGE_NOT_FOUND" class="pack"> Error 404</label>
+                    <label><input type="checkbox" data-source="CSRF" class="pack"> CSRF Token</label>
+                    <label><input type="checkbox" data-source="MODULE" class="pack"> Module</label>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-success build-basic">Build Project</button>
+                    <span class="text-warning" style="float:right">Folder: <span class="text-muted folder_name"></span></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Advance Settings
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">Application</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu2">Database</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu3">Vendors</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane container active" id="home">
+                  <div class="clearfix"></div>
+                    <form>
+                      <div class="form-group">
+                      <hr>
+                        <label>Project Name </label>
+                        <input class="form-control project_name_advance"  name="project_name_advance" placeholder="Enter Project Name Here...">
+                      </div>
+                      <div class="form-group packages_advance">
+
+                        <h5>Packages</h5>
+                        <label><input type="checkbox" data-source="ALL" class="pack_ad"> All</label>
+                        <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack_ad"> Query Builder</label>
+                        <label><input type="checkbox" data-source="ENCRYPTION" class="pack_ad"> Encryption</label>
+                        <label><input type="checkbox" data-source="DEFAULTS" class="pack_ad"> Defaults</label>
+                        <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack_ad"> Download</label>
+                        <label><input type="checkbox" data-source="UPLOAD" class="pack_ad"> Upload</label>
+                        <label><input type="checkbox" data-source="DOWNLOAD" class="pack_ad"> Download</label>
+                        <label><input type="checkbox" data-source="SESSION" class="pack_ad"> Session</label>
+                        <label><input type="checkbox" data-source="MAINTENANCE_CLASS" class="pack_ad"> Maintenance Class</label>
+                        <label><input type="checkbox" data-source="PAGE_NOT_FOUND" class="pack_ad"> Error 404</label>
+                        <label><input type="checkbox" data-source="CSRF" class="pack_ad"> CSRF Token</label>
+                        <label><input type="checkbox" data-source="MODULE" class="pack_ad"> Module</label>
+                      </div>
+                      <div class="clearfix"></div>
+                      <hr>
+                      <div class="form-group">
+                       
+                        <span class="text-warning" style="float:right">Folder: <span class="text-muted folder_name_advance"></span></span>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane container fade" id="menu1">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>Local </label>
+                        <select class="form-control local"  name="local">
+                          <option value="1">On</option>
+                          <option value="0">Off</option>
+                        </select>
+                      </div>
+                       <div class="form-group col-md-6">
+                        <hr>
+                        <label>Console </label>
+                        <select class="form-control console"  name="console">
+                          <option value="1">On</option>
+                          <option value="0">Off</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>CSS Error </label>
+                        <select class="form-control css_error"  name="css_error">
+                          <option value="1">On</option>
+                          <option value="0">Off</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>JS Error </label>
+                        <select class="form-control js_error"  name="js_error">
+                          <option value="1">On</option>
+                          <option value="0">Off</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>Default Image Upload Size </label>
+                        <input class="form-control default_image_size"  value="8000000000000"  name="default_image_size" placeholder="Enter Default Image Size Value Here...">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>Default File Upload Size </label>
+                        <input class="form-control default_file_size" name="default_file_size" value="8000000000000" placeholder="Enter Default File Size Value Here...">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="tab-pane container fade" id="menu2">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>DB Connection</label>
+                        <input class="form-control db_connection" name="db_connection" value="mysql" placeholder="Enter Connection Value Here...">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>DB Host</label>
+                        <input class="form-control db_host" name="db_host" value="localhost" placeholder="Enter Host Value Here...">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>DB Name</label>
+                        <input class="form-control db_name" name="db_name" value="" placeholder="Enter Database Name Here...">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>DB Charset</label>
+                        <input class="form-control db_charset" name="db_charset" value="utf8" placeholder="Enter Database CHARSET Here...">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>DB Username</label>
+                        <input class="form-control db_user" name="db_user" value="" placeholder="Enter Database Username Here...">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <hr>
+                        <label>DB Password</label>
+                        <input class="form-control db_password" name="db_password" value="" placeholder="Enter Database Password Here...">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="tab-pane container fade" id="menu3">
+                    <div class="form-group">
+                      <hr>
+                      <label>Global Styles</label>
+                      <textarea class="form-control vendor_styles" rows="5" name="vendor_styles">
+bootstrap.min
+all
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                      <hr>
+                      <label>Global Scripts</label>
+                      <textarea class="form-control vendor_scripts" rows="5" name="vendor_scripts">
+jquery
+bootstrap.min
+fontawesome.min
+                      </textarea>
+                    </div>
+                  </div>
+                   <button type="button" class="btn btn-success build-advance">Build Project</button>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Open Project Modal -->
+<div class="modal fade" id="openProject">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Open Project</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="project-drawer">
+          <ul class="project-list">
+            
+          </ul>
+        </div>
+        
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      </div>
+
+    </div>
+  </div>
+</div>
