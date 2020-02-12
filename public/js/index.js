@@ -119,14 +119,15 @@ $(".build-basic").click(function(){
 			},
 			type:"POST",
 			dataType:"JSON",
-			beforeSend:function(){
+			beforeSend:(e)=>{
 				$("#pre1").css({"display":"block"});
 			},
-			success:function(e){
+			success:(e)=>{
 				$("#pre1").css({"display":"none"});
-				window.location = "ide";
+				// window.location = "ide";
+				openProject($(".project_name").val()+".chkn",folder_name);
 			},
-			error:function(e){
+			error:(e)=>{
 				$("#pre1").css({"display":"none"});
 				swal("Folder Already exists!");
 			}
@@ -164,7 +165,7 @@ $(document).on("click",".delete-project",function(e){
 				},
 				error:function(e){
 					$("#pre2").css({"display":"none"});
-					swal("Something went wrong!");
+					swal("Project Not Found!");
 				}
 			});
 		}
@@ -221,7 +222,8 @@ $(".build-advance").click(function(){
 			},
 			success:function(e){
 				$("#pre1").css({"display":"none"});
-				window.location = "ide";
+				
+				openProject($(".project_name_advance").val()+".chkn",folder_name_advance);
 			},
 			error:function(e){
 				$("#pre1").css({"display":"none"});
@@ -236,12 +238,18 @@ $(".build-advance").click(function(){
 });
 
 $(document).on("click",".open-project",function(){
+	var source = $(this).attr("data-source");
+	var dependent = $(this).attr("data-dependent");
+	openProject(source,dependent);
+});
+
+function openProject(source,dependent){
 	$.ajax({
 		url:"setup/openProject",
 		type:"POST",
 		data:{
-			"project":$(this).attr("data-source"),
-			"folder":$(this).attr("data-dependent")
+			"project":source,
+			"folder":dependent
 		},
 		dataType:"JSON",
 		beforeSend:function(){
@@ -255,4 +263,4 @@ $(document).on("click",".open-project",function(){
 			swal("Project Not Found!");
 		}
 	});
-});
+}

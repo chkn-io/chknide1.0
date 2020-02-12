@@ -27,7 +27,8 @@
 				<nav>
 					<a href="#" class="new-project"><i class="fas fa-egg"></i> New Project</a>
 					<a href="#" class="open-project"><i class="fas fa-drumstick-bite"></i> Open Project</a>
-					<a href="https://github.com/peejayb1996/CHKN3" target="_blank"><i class="fab fa-github"></i> Documentation</a>
+					<a href="https://github.com/chkn-io/CHKN3" target="_blank"><i class="fab fa-github"></i> IDE Documentation</a>
+					<a href="https://github.com/chkn-io/chknide1.0" target="_blank"><i class="fab fa-github"></i> CHKN Framework Documentation</a>
 				</nav>
 		</div>
 	</div>
@@ -72,7 +73,6 @@
                     <label><input type="checkbox" data-source="DEFAULTS" class="pack"> Defaults</label>
                     <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack"> Download</label>
                     <label><input type="checkbox" data-source="UPLOAD" class="pack"> Upload</label>
-                    <label><input type="checkbox" data-source="DOWNLOAD" class="pack"> Download</label>
                     <label><input type="checkbox" data-source="SESSION" class="pack"> Session</label>
                     <label><input type="checkbox" data-source="MAINTENANCE_CLASS" class="pack"> Maintenance Class</label>
                     <label><input type="checkbox" data-source="PAGE_NOT_FOUND" class="pack"> Error 404</label>
@@ -133,7 +133,6 @@
                         <label><input type="checkbox" data-source="DEFAULTS" class="pack_ad"> Defaults</label>
                         <label><input type="checkbox" data-source="QUERY_BUILDER" class="pack_ad"> Download</label>
                         <label><input type="checkbox" data-source="UPLOAD" class="pack_ad"> Upload</label>
-                        <label><input type="checkbox" data-source="DOWNLOAD" class="pack_ad"> Download</label>
                         <label><input type="checkbox" data-source="SESSION" class="pack_ad"> Session</label>
                         <label><input type="checkbox" data-source="MAINTENANCE_CLASS" class="pack_ad"> Maintenance Class</label>
                         <label><input type="checkbox" data-source="PAGE_NOT_FOUND" class="pack_ad"> Error 404</label>
